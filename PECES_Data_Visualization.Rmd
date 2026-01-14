@@ -1,0 +1,142 @@
+---
+title: "PECES_Data_Visualization"
+author: "Abby Whittington"
+date: "2026-01-14"
+output: html_document
+---
+
+##Data Visualization Module - R Format
+
+#Bring in Data from Module #1
+You should have learned in the last module how to download, open, and clean a dataset. Re-write your code here to attain the Northern Hemisphere Sea Ice data.
+
+```{r}
+#Read/Load CSV file
+NHemi_SeaIce <- read.csv("/Users/abigailwhittington/Desktop/SeaIce_Northern_AllMonths.csv")
+
+#Clean your Data
+```
+
+#View Data
+Now, open your dataframe (the common name for a dataset in R) to ensure that your desire data is present. In this dataframe, 'Value' signifies sea ice extent (area) in million km^2. Anomaly is the deviation from the 1991-2020 average value. The dataframe spans from 1979 to 2025.
+```{r}
+view(NHemi_SeaIce)
+```
+
+Today we are going to use the 'tidyverse' to do our data visualization. This is package within R (a downloadable set of code). Tidyverse is very user-friendly and is designed to be easy to read for coding beginners.
+
+#Install and Load Packages for Visualization and Date Formatting
+```{r}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+
+#Format Date to be Useable - if not already completed in cleaning steps
+Here, we use lubridate (a tidyverse package) to change the date from "197901" to 1979-01-01. If you have already done this step while cleaning your data, you can skip this 'chunk' of code.
+```{r}
+NHemi_SeaIce <- NHemi_SeaIce |>
+  mutate(Date = ym(Date))
+```
+
+
+#How to Use ggplot
+This is a step-by-step guide on how we build the first scatter plot. Feel free to skip this module, or come back to it later if you are confused.
+```{r}
+#Let's say we want a plot! First we call in the ggplot function and tell it what our data is (the first entry), and then use the aesthetic (aes) call to input our variables.
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value ))
+
+#This makes a blank plot! Where is our data? We have to tell ggplot what format we want to plot in - scatter, line, bar, histogram, etc.
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value )) +
+  geom_point()
+
+#What if we want to add labels?
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value )) +
+  geom_point() +
+  labs (y = "Sea Ice Extent (million km^2)", title = "Ice Coverage vs Time")
+```
+
+
+#Make General Plots of the Raw Data
+We should look at our data to see how it changes across time, so we can get an idea of the trend of sea ice over time. 
+```{r}
+#Scatter plot
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value )) + 
+  geom_point() +
+  labs (y = "Sea Ice Extent (million km^2)", title = "Ice Coverage vs Time")
+
+
+#Here we use ggplot (a tidyverse visualization package) to plot our dataframe. We then select our axes (x is independent and y is dependent). For many environmental datasets, Date is used as an independent variable. The plus sign allows us to tell ggplot what type of plot we want, which we signify with geom_point (used for scatter plots). 
+
+#The labs () line of code allows us to add the correct titles to our axes and a title to our plot.
+```
+Note how we have one significant outlier at -1000. This is hiding our actual trend! This is likely a filler value - something meant to signify missing or incorrect data. We will now remove that. 
+
+#Remove outlier
+```{r}
+NHemi_SeaIce <- NHemi_SeaIce |>
+  filter(Value > 0) 
+
+#Here we have filtered our data to only include values above 0. We are able to know we are not removing any 'real' data by looking at our scatter plot, and through general context. The existence of sea ice on a yearly average would never be negative!
+```
+
+Let's check if that fixed the problem
+#Make general plot of the data without any outliers
+```{r}
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value )) +
+  geom_point() +
+  labs (y = "Sea Ice Extent (million km^2)", title = "Ice Coverage vs Time")
+
+#This is a scatter plot again
+```
+For this dataset, a scatter plot may be confusing due to the density of points. Let's try this again as a line plot and then a histogram to see what form of visualization makes the most sense to us.
+
+#Plot a Line Plot
+```{r}
+ggplot(NHemi_SeaIce, aes(x = Date, y = Value )) +
+  geom_line() +
+  labs (y = "Sea Ice Extent (million km^2)", title = "Ice Coverage vs Time")
+
+#We swap geom_point for geom_line to go from a scatter plot to a line plot.
+```
+#Plot a histogram
+In a histogram, our data is automatically placed into 'bins'. These bins group average yearly sea ice values with other similar values and count up the number of time those similar values occur across our entire dataset. This is useful to see how frequently certain values occur, but can occlude time-based trends.
+```{r}
+ggplot(NHemi_SeaIce, aes(x=Value)) +
+  geom_histogram() +
+  labs (x = "Sea Ice Extent (million km^2)", title = "Ice Coverage vs Time")
+
+#We swap geom_line/point to geom_histogram to plot our data as a histogram.
+```
+Think about research questions you could ask using this dataset. Put 1-3 ideas below:
+  1.
+  2.
+  3.
+  
+For each research questions, think about which form of data visualization would make the most sense to answer the question. Would any of your research questions benefit from looking at sea ice anomalies instead of extent?
+
+You should try to remake the above three plots using the Anomaly column now. 
+
+#Scatter plot for Anomaly Data
+```{r}
+
+```
+
+#Line plot for Anomaly Data
+```{r}
+
+```
+
+#Histogram for Anomaly Data
+```{r}
+
+```
+
+Below explain the differences between the sea ice extent and anomaly data that become apparent after you plotted both sets of data.
+
+
+
+Do your observations change which plots you would use for your earlier research questions?
+
+
+If you want to explore any further plotting, go ahead! If you use the 'help' panel or google, you can find more information about ggplot and the types of plots R is capable of making. Otherwise, you can try to explore the geospatial components of this data. 
