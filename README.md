@@ -11,22 +11,26 @@ PECES R Modules
 <!-- Information badges -->
 
 <p align="center">
-  <strong>Jupyter + R:</strong>
-  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD">
-    <img alt="Binder Jupyter+R" src="https://mybinder.org/badge_logo.svg">
-  </a>
-  &nbsp;&nbsp;&nbsp;
+  <span style="margin-right: 1.5em;">
+    <strong>Jupyter + R:</strong>
+    <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD">
+      <img src="https://mybinder.org/badge_logo.svg">
+    </a>
+  </span>
 
-  <strong>RStudio:</strong>
-  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=rstudio">
-    <img alt="Binder RStudio" src="https://mybinder.org/badge_logo.svg">
-  </a>
-  &nbsp;&nbsp;&nbsp;
+  <span style="margin-right: 1.5em;">
+    <strong>RStudio:</strong>
+    <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=rstudio">
+      <img src="https://mybinder.org/badge_logo.svg">
+    </a>
+  </span>
 
-  <strong>RShiny:</strong>
-  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/">
-    <img alt="Binder RShiny" src="https://mybinder.org/badge_logo.svg">
-  </a>
+  <span>
+    <strong>RShiny:</strong>
+    <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/">
+      <img src="https://mybinder.org/badge_logo.svg">
+    </a>
+  </span>
 </p>
 
 
