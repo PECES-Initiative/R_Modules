@@ -10,11 +10,24 @@ PECES R Modules
 
 <!-- Information badges -->
 
-Jupyter+R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD)
+<p align="center">
+  <strong>Jupyter + R:</strong>
+  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD">
+    <img alt="Binder Jupyter+R" src="https://mybinder.org/badge_logo.svg">
+  </a>
+  &nbsp;&nbsp;&nbsp;
 
-RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=rstudio)
+  <strong>RStudio:</strong>
+  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=rstudio">
+    <img alt="Binder RStudio" src="https://mybinder.org/badge_logo.svg">
+  </a>
+  &nbsp;&nbsp;&nbsp;
 
-RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/)
+  <strong>RShiny:</strong>
+  <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/">
+    <img alt="Binder RShiny" src="https://mybinder.org/badge_logo.svg">
+  </a>
+</p>
 
 
 During PECES 2026, we developed a series of R teaching modules to introduce key programming and data science concepts. This repository is meant to be a growing list of activities that teachers can use and add to. We hope that these modules can be useful in classes and provide inspiratio for further modules.
@@ -27,23 +40,23 @@ A similar set of [R teaching modules are availbile at a sister repository](https
 
 1. Fork this repository! This will make a copy of this repository in your personal GitHub account. [Here are instructions!](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 2. [Clone](https://github.com/git-guides/git-clone) the repository locally on your computer. In the terminal, go to the location you want the repository to be located and type:
-```
-git clone git@github.com:PECES-Initiative/R_Modules.git
-```
+  ```
+  git clone git@github.com:PECES-Initiative/R_Modules.git
+  ```
 
 2. Make a branch! Pick a branch name, for example `sea_ice_module`. In the terminal type (but replace with your branch name):
-```
-git switch -c sea_ice_module
-```
+  ```
+  git switch -c sea_ice_module
+  ```
 
 3. You can now add in your module (which should be a R notebook `.Rmb` or a `.ipynb` file) and any other content within your local copy. If you are adding any supplementary material other than a notebook, please make a sub-folder with your module name and add in your content.
 
 4. Git [add](https://github.com/git-guides/git-add), [commit](https://github.com/git-guides/git-commit), and [push](https://github.com/git-guides/git-push) your content. Write your own commit message. Here In the terminal type:
-```
-git add .
-git commit -m "Adding sea ice module - WRITE YOUR OWN DONT COPY THIS"
-git push
-```
+  ```
+  git add .
+  git commit -m "Adding sea ice module - WRITE YOUR OWN DONT COPY THIS"
+  git push
+  ```
 
 5. Your code is now on your branch on your copy of the GitHub repository! Repeat Step 4 as you keep adding new content or updating your module! See below in the Binder section about how to keep track of what packages you use! 
 
