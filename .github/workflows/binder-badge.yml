@@ -1,6 +1,11 @@
 name: binder-badge
+
 on:
   pull_request_target:
+
+permissions:
+  pull-requests: write
+  issues: write
 
 jobs:
   badge:
