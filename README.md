@@ -46,8 +46,6 @@ For more information on Binder, and how it automatically sets up the environment
 
 # Adding New Modules
 
-# Adding New Modules
-
 These steps might be slightly more tricky if you have never worked with GitHub before! We have tried to include notes on extra steps that are neccesasry for newcomers. There are links on all commands to learn more about them if needed, but you shouldn't need more than what is written here. Thank you for sticking with it to use and/or contribute to our repository! 
 
 0. Make a GitHub account. You will also need to vertify your email address. Finally, generate a [personal access token](https://github.com/orgs/PECES-Initiative/repositories). You will need this personal access token when you get to pushing code to your repository.
@@ -56,15 +54,14 @@ These steps might be slightly more tricky if you have never worked with GitHub b
 
 2. You can then find the URL for your forked repository by going to your GitHub account and then going to your repositories. Click on your forked repository and then copy the URL! Use it in the `clone` command below.
 
-
-2. [Clone](https://github.com/git-guides/git-clone) the repository locally on your computer. 
+3. [Clone](https://github.com/git-guides/git-clone) the repository locally on your computer. 
 
 In the terminal, go to the location you want the repository to be located and type:
     ```
     git clone https://github.com/<your username>/<your repo name>.git
     ```
 
-2. Make a branch! Pick a branch name, for example `sea_ice_module`. In the terminal type (but replace with your branch name):
+4. Make a branch! Pick a branch name, for example `sea_ice_module`. In the terminal type (but replace with your branch name):
     ```
     git switch -c sea_ice_module
     ```
@@ -75,9 +72,9 @@ You can see the existing branches by typing:
     ```
 You will see two branches: `main` and whatever your branch name is! Your branch name will be green because you're on that branch. Your file system will reflect your branch, so you don't need to do anything else.
 
-3. You can now add in your module (which should be a Python notebook `.ipynb` file) and any other content within your local copy. If you are adding any supplementary material other than a notebook, please make a sub-folder with your module name and add in your content.
+5. You can now add in your module (which should be a Python notebook `.ipynb` file) and any other content within your local copy. If you are adding any supplementary material other than a notebook, please make a sub-folder with your module name and add in your content.
 
-4. Git [add](https://github.com/git-guides/git-add), [commit](https://github.com/git-guides/git-commit), and [push](https://github.com/git-guides/git-push) your content. Write your own commit message. Here In the terminal type:
+6. Git [add](https://github.com/git-guides/git-add), [commit](https://github.com/git-guides/git-commit), and [push](https://github.com/git-guides/git-push) your content. Write your own commit message. Here In the terminal type:
     ```
     git add .
     git commit -m "Adding sea ice module - WRITE YOUR OWN DONT COPY THIS"
@@ -88,15 +85,21 @@ You will then `push the code:
 git push
 ```
 
-Since this is your first time pushing to this repository, it will likely git you an error. It will give you a line to put into the repository, which is just linking this local copy to your GitHub repository. Just copy and paste that in! You might also need to "log in" with your personal access token if you have never used Github before. You only need to do this once!
+Since this is your first time pushing to this repository, it will likely git you an error. It will give you a line to put into the repository, which is just linking this local copy to your GitHub repository. Just copy and paste that in! It will look like:
 
-5. Your code is now on your branch on your copy of the GitHub repository! Repeat Step 4 (without all of the extra login issues) as you keep adding new content or updating your module! See below in the Binder section about how to keep track of what packages you use! 
+```
+git push --set-upstream origin <your branch name>
+```
 
-6. When you module is done, open a Pull Request (PR) so that your module can be added to the main Github organization (since it is just on your fork right now!). [Here is step by step guide of how to open a PR](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/). Make sure you have completed the PR checklist that shows up once you have made the PR.
+You might also need to "log in" with your personal access token if you have never used Github before. You only need to do this once!
 
-7. An administrator will check your module and approve your pull request!
+7. Your code is now on your branch on your copy of the GitHub repository! Repeat Step 4 (without all of the extra login issues) as you keep adding new content or updating your module! See below in the Binder section about how to keep track of what packages you use! 
 
-8. You're done! Thank you for contributing! 
+8. When you module is done, open a Pull Request (PR) so that your module can be added to the main Github organization (since it is just on your fork right now!). [Here is step by step guide of how to open a PR](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/). Make sure you have completed the PR checklist that shows up once you have made the PR.
+
+9. An administrator will check your module and approve your pull request!
+
+10. You're done! Thank you for contributing!
 
 # Using Binder
 
