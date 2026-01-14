@@ -24,21 +24,25 @@ PECES R Modules
       <img src="https://mybinder.org/badge_logo.svg">
     </a>
   </span>
-
-  <span>
-    <strong>RShiny:</strong>
-    <a href="https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/">
-      <img src="https://mybinder.org/badge_logo.svg">
-    </a>
-  </span>
 </p>
 
 
-During PECES 2026, we developed a series of R teaching modules to introduce key programming and data science concepts. This repository is meant to be a growing list of activities that teachers can use and add to. We hope that these modules can be useful in classes and provide inspiratio for further modules.
+During PECES 2026, we developed a series of R teaching modules to introduce key programming and data science concepts. This repository is meant to be a growing list of activities that teachers can use and add to. We hope that these modules can be useful in classes and provide inspiration for further modules.
 
-A similar set of [R teaching modules are availbile at a sister repository](https://github.com/PECES-Initiative/Python_Modules).
+A similar set of [R teaching modules are available at a sister repository](https://github.com/PECES-Initiative/Python_Modules).
 
 # Using the Modules
+
+Feel free to use these modules however you want! You can use them directly in your class. The easiest way to do this, with no setup, is to simply launch binder. You can click on either of the badges above, or follow these links:
+
+- Jupyter + R: https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD
+- RStudio: https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/
+
+This will launch off the notebooks within a web broweser for interactive use. Any changes are not saved, but the environment is automatically set up. Updated notebooks can be downloaded. 
+
+Another option would be to fork this repository, which will make a copy in your personal Github account. You will be able to update it with any newly added modules over time. You can then adapt any modules, or distribute them to students another way (RStudio, Quatro, etc.).
+
+For more information on Binder, and how it automatically sets up the environment, see the Binder section below.
 
 # Adding New Modules
 
@@ -70,11 +74,12 @@ A similar set of [R teaching modules are availbile at a sister repository](https
 
 8. You're done! Thank you for contributing! 
 
-# Using Binder
+# Using Binder with R
 
 Binder supports using R and RStudio, with libraries pinned to a specific
 snapshot on [packagemanager.rstudio.com](https://packagemanager.rstudio.com/client/#/).
-### Requirements and suggestions
+
+## Requirements and suggestions
 
 You need to have a `runtime.txt` file that is formatted like:
 
@@ -122,7 +127,7 @@ packages available in [conda-forge](https://conda-forge.org/)
 
 Another alternative is to use the [holepunch package for R](https://karthik.github.io/holepunch/articles/getting_started.html).
 
-### URL addresses for RStudio and Shiny environments
+## URL addresses for RStudio and Shiny environments
 
 The Binder repository can be used to allow anyone to access an RStudio environment containing our code and data right
 in their web browser. It also allows hosting a Shiny app. For those purposes, we have to append a bit of text to the
