@@ -1,4 +1,14 @@
-# R Modules from PECES
+<!-- Title -->
+<h1 align="center">
+PECES R Modules
+</h1>
+
+<!-- description -->
+<p align="center">
+  <strong>R Teaching modules for teaching programming and earth science concepts. Developed during Programming in Earth Science Classroom Educational Workshop (PECES). </strong>
+</p>
+
+<!-- Information badges -->
 
 Jupyter+R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD)
 
@@ -6,11 +16,19 @@ RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2
 
 RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PECES-Initiative/R_Modules/HEAD?urlpath=shiny/bus-dashboard/)
 
+
+During PECES 2026, we developed a series of R teaching modules to introduce key programming and data science concepts. This repository is meant to be a growing list of activities that teachers can use and add to. We hope that these modules can be useful in classes and provide inspiratio for further modules.
+
+A similar set of [R teaching modules are availbile at a sister repository](https://github.com/PECES-Initiative/Python_Modules).
+
+# Using the Modules
+
+# Adding New Modules
+
+# Using Binder
+
 Binder supports using R and RStudio, with libraries pinned to a specific
 snapshot on [packagemanager.rstudio.com](https://packagemanager.rstudio.com/client/#/).
-
-TODO: Add Description
-
 ### Requirements and suggestions
 
 You need to have a `runtime.txt` file that is formatted like:
