@@ -25,6 +25,34 @@ A similar set of [R teaching modules are availbile at a sister repository](https
 
 # Adding New Modules
 
+1. Fork this repository! This will make a copy of this repository in your personal GitHub account. [Here are instructions!](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+2. [Clone](https://github.com/git-guides/git-clone) the repository locally on your computer. In the terminal, go to the location you want the repository to be located and type:
+```
+git clone git@github.com:PECES-Initiative/R_Modules.git
+```
+
+2. Make a branch! Pick a branch name, for example `sea_ice_module`. In the terminal type (but replace with your branch name):
+```
+git switch -c sea_ice_module
+```
+
+3. You can now add in your module (which should be a R notebook `.Rmb` or a `.ipynb` file) and any other content within your local copy. If you are adding any supplementary material other than a notebook, please make a sub-folder with your module name and add in your content.
+
+4. Git [add](https://github.com/git-guides/git-add), [commit](https://github.com/git-guides/git-commit), and [push](https://github.com/git-guides/git-push) your content. Write your own commit message. Here In the terminal type:
+```
+git add .
+git commit -m "Adding sea ice module - WRITE YOUR OWN DONT COPY THIS"
+git push
+```
+
+5. Your code is now on your branch on your copy of the GitHub repository! Repeat Step 4 as you keep adding new content or updating your module! See below in the Binder section about how to keep track of what packages you use! 
+
+6. When you module is done, open a Pull Request (PR) so that your module can be added to the main Github organization (since it is just on your fork right now!). [Here is step by step guide of how to open a PR](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/). Make sure you have completed the PR checklist that shows up once you have made the PR.
+
+7. An administrator will check your module and approve your pull request!
+
+8. You're done! Thank you for contributing! 
+
 # Using Binder
 
 Binder supports using R and RStudio, with libraries pinned to a specific
