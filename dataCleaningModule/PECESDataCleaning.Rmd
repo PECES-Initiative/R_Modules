@@ -1,0 +1,52 @@
+---
+title: "Sea ice extent"
+output: html_document
+date: "2026-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dplyr)
+```
+
+
+## Step 1: Import dataset
+
+```{r}
+#df <- read.csv("/cloud/project/data/SeaIce_Northern_AllMonths.csv")
+#error! This can't be read in beacuse there are some structural issues with the dataset
+
+df <- read.csv("SeaIce_Northern_AllMonths.csv", #file path and file name
+               skip = 4, #there are 4 rows above the column names, this is metadata
+               header = TRUE) #The first row is column names
+```
+
+## Step 2: Clean dataset
+
+```{r}
+str(df) #Look at the structure of the new variable df
+
+summary(df) #This function creates a general summary of the dataframe and its columns. Do you see any strange values? 
+
+head(df) #What do the first 10 lines of the data look like? 
+```
+Let's check the date column. What is the data type of the column "Date"?  
+```{r}
+str(df$Date)
+```
+
+Let's fix it so that it is formatted correctly! We are going to use tidyverse packages to manipulate the dataset and format it so that it is usable. 
+
+In the tidyverse, data are manipulated in sequential steps. Today we will use two functions of the dpylr pacakge: mutate and filter. Mutate creates new columns using other existing columns, and the filter function can help subset data to remove any outliers. 
+```{r}
+dfClean <- df %>% #start with the original data frame. This %>% is called a pipe, and works to move the object into the next line of code where it can be further manipulated
+  mutate(Date = as.Date(Date, format = "%Y%m")) #mutate will help us convert the date column into an actual date object in the correct format 
+
+str(dfClean$Date)
+
+```
+
+Here is a resource for understanding how to format dates in R: https://www.r-bloggers.com/2013/08/date-formats-in-r/
